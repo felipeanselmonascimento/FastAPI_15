@@ -7,6 +7,10 @@ name = "pypi"
 fastapi = "*"
 pylint = "*"
 uvicorn = "*"
+sqlalchemy = "*"
+aiosqlite = "*"
+pytest = "*"
+pytest-asyncio = "*"
 
 [dev-packages]
 
