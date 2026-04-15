@@ -1,3 +1,6 @@
 .vscode
 pylint.md
 schema.db
+__pycache__/
+*.pyc
+.gitignore
