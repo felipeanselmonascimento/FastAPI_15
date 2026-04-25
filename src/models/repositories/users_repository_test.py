@@ -12,4 +12,22 @@ async def test_insert_user():
     repo = UsersRepository()
     await repo.insert_users(new_user)
 
+@pytest.mark.asyncio
+@pytest.mark.skip(reason="Update in DB")
+async def test_update_user():
+    updated_infos = {
+        "user_name": "NomeAtualizado",
+        "age": 30,
+        "uf": "RJ"
+    }
+    repo = UsersRepository()
+    await repo.update_user(1, updated_infos)
+
     # pytest -s -v src/models/repositories/users_repository_test.py
+
+# @pytest.mark.skip(reason="Insert in DB")
+@pytest.mark.asyncio
+async def test_get_users_by_name():
+    repo = UsersRepository()
+    response = await repo.get_users_by_name("fulano")
+    print(response)

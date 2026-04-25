@@ -15,3 +15,5 @@ if __name__ == "__main__":
 
 
 # Cliente → Uvicorn → FastAPI → sua função → resposta
+
+# pipenv run python run.py

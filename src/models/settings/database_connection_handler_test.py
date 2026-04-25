@@ -12,6 +12,6 @@ async def test_connection():
 
 # sempre colocar test_ na frente de toda funcao de teste q definirmos
 
-# pytest -s -v src/models/settings/database_connection_handler_test.py
+# pytest -s -v src/models/settings/users_repository_test.py
 
 # .mark.asyncio é necessário porque o pytest é síncrono por padrão, e o decorator avisa que precisa de tratamento especial pra rodar código async.
