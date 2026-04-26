@@ -21,10 +21,10 @@ async def create_user():
         status_code=200
     )
 
-@users_routes.get("/users")
-async def get_users(user_name: str):
+@users_routes.get("/users/{user_id}")
+async def get_users(user_id: int):
     repository = UsersRepository()
-    users = await repository.get_users_by_name(user_name)
+    users = await repository.get_users_by_id(user_id)
     return JSONResponse(
         content={"users": users},
         status_code=200

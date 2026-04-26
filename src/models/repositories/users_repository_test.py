@@ -27,7 +27,7 @@ async def test_update_user():
 
 # @pytest.mark.skip(reason="Insert in DB")
 @pytest.mark.asyncio
-async def test_get_users_by_name():
+async def test_get_users_by_id():
     repo = UsersRepository()
-    response = await repo.get_users_by_name("fulano")
+    response = await repo.get_users_by_id(1)
     print(response)
